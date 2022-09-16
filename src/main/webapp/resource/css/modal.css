@@ -1,0 +1,103 @@
+.modal.left .modal-dialog {
+	position: fixed;
+	margin: auto;
+	height: 300px;
+	width: 100%;
+	right:0;
+	border: 0;
+        opacity: 0.9;
+	-webkit-transform: translate3d(0%, 0, 0);
+	-ms-transform: translate3d(0%, 0, 0);
+	-o-transform: translate3d(0%, 0, 0);
+	transform: translate3d(0%, 0, 0);
+}
+
+.modal.left .modal-content {
+	width: 100%;
+        background: #fff;
+ }
+
+.modal.left .modal-body {
+	padding: 20px 20px 10px 10px;
+}
+
+.modal.left.fade .modal-dialog {
+	top: 378px;
+	right:-300px;
+	-webkit-transition: transform 0.3s linear, opacity 0.3s linear, bottom 0.3s ease-out;
+	-moz-transition: transform 0.3s linear, opacity 0.3s linear, bottom 0.3s ease-out;
+	-o-transition: transform 0.3s linear, opacity 0.3s linear, bottom 0.3s ease-out;
+	transition: transform 0.3s linear, opacity 0.3s linear, bottom 0.3s ease-out;
+}
+
+.modal.left.fade.show .modal-dialog {
+	transform: translate(-300px, -300px);
+}
+
+.modal-header {
+         border-bottom-color: #eeeeee;
+	background: none;
+
+}
+
+.draw:focus {
+    box-shadow: inherit;
+}
+
+.draw {
+  background: 000000;
+  border: 0;
+  box-sizing: border-box;
+  color: #f45e61;
+  font-size: inherit;
+  font-weight: 700;
+  position: relative;
+  vertical-align: middle;
+}
+.draw::before, .draw::after {
+  box-sizing: inherit;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.draw {
+  transition: color 0.25s;
+}
+.draw::before, .draw::after {
+  border: 2px solid transparent;
+  box-shadow: #f45e61 0px 3px 14px;
+  width: 0;
+  height: 0;
+}
+.draw::before {
+  top: 0;
+  left: 0;
+    transition: box-shadow 0.25s ease-out, width 0.25s ease-out, height 0.25s ease-out 0.25s;
+
+}
+.draw::after {
+  bottom: 0;
+  right: 0;
+    transition: box-shadow 0.25s ease-out, border-color .25s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+
+}
+ 
+.drawhover::before, .drawhover::after {
+  width: 100%;
+  height: 100%;
+}
+.drawhover::before {
+  border-top-color: #60daaa;
+  border-right-color: #60daaa;
+  box-shadow: #60daaa 0px 3px 14px;
+
+}
+.drawhover::after {
+  border-bottom-color: #60daaa;
+  border-left-color: #60daaa;
+    box-shadow: #60daaa 0px 3px 14px;
+
+
+}

@@ -1,0 +1,32 @@
+        .noImprimible {
+            visibility: hidden;
+            display: none;
+            }
+    body {
+        margin-left: 0px;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+    }
+    
+table.tbl-rpt th, table.tbl-rpt td {
+    border: 1px solid #000000;
+    padding: 4px 8px 2px;
+}
+
+table.tbl-rpt {
+    border-bottom: 2px solid #000000;
+    border-collapse: collapse;
+    border-top: 2px solid #000000;
+}
+table.act td {
+    text-align: center;
+    width: 250px;
+}
+
+table.act td p {
+    margin-top: 73px;
+}
+   
+  
+   

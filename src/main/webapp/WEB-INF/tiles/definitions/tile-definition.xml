@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+	"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	
+    <definition name="baseLayout" template="/WEB-INF/tiles/template/baseLayout.jsp">
+        <put-attribute name="title" value="Sample Title" />
+        <put-attribute name="heading" value="/WEB-INF/tiles/template/header.jsp" />
+        <put-attribute name="tagline" value="" />
+        <put-attribute name="navigation" value="/WEB-INF/tiles/template/navigation.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/WEB-INF/tiles/template/footer.jsp" />
+    </definition>
+
+ <definition name="baseOutside" template="/WEB-INF/tiles/template/baseOutside.jsp">
+        <put-attribute name="title" value="Sample Title" />
+        <put-attribute name="heading" value="/WEB-INF/tiles/template/header.jsp" />
+        <put-attribute name="tagline" value="" />
+        <put-attribute name="navigation" value="/WEB-INF/tiles/template/navigation.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/WEB-INF/tiles/template/footer.jsp" />
+    </definition>
+    
+    <definition name="baseNull" template="/WEB-INF/tiles/template/baseNull.jsp">
+        <put-attribute name="body" value="" />
+    </definition>
+
+    <definition name="welcome" extends="baseLayout">
+        <put-attribute name="title" value="Sistema Castañero" /> 
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/welcome.jsp" />
+    </definition>
+        
+    <definition name="addUser" extends="baseLayout">
+        <put-attribute name="title" value="Add User" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/signup.jsp" />
+    </definition>
+	
+   
+        
+    <definition name="login" extends="baseLayout">
+        <put-attribute name="title" value="Login" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/login.jsp" />
+    </definition>
+	
+     <definition name="inicioInstitucion" extends="baseLayout">
+        <put-attribute name="title" value="ListarInstitucion" />
+        <put-attribute name="tagline" value="Questions Detail" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/prueba/listaInstitucion.jsp" />
+    </definition>
+    
+    <definition name="RegPersonas" extends="baseLayout">
+        <put-attribute name="title" value="Listar Personas" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/administrarPersonas/listarPersonas.jsp" />
+    </definition>
+        
+    <definition name="registrado" extends="baseLayout">
+        <put-attribute name="title" value="Registrar Personas" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/administrarPersonas/RegistrarPersonas.jsp" />
+    </definition>
+	
+    <definition name="registrarPnlCargos" extends="baseLayout">
+        <put-attribute name="title" value="Registrar Cargos" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/administrarCargos/registrarPnlCargos.jsp" />
+    </definition>
+    
+    <definition name="confirmarRegistroC" extends="baseLayout">
+        <put-attribute name="title" value="Registrar Cargos" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/administrarCargos/mostrarResultadosC.jsp" />
+    </definition>
+  
+    <definition name="listarUbicaciones" extends="baseLayout">
+        <put-attribute name="title" value="Ubicacion Geografica" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/administrarUbicacionesGeograficas/formUbicacionOrganica.jsp" />
+    </definition>
+	
+    <definition name="registrarUbiG" extends="baseLayout">
+        <put-attribute name="title" value="Ubicacion Geografica" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/administrarUbicacionesGeograficas/formRegistrado.jsp" />
+    </definition>
+    
+    <definition name="buscarPersonas" extends="baseLayout">
+        <put-attribute name="title" value="Buscar Personas" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/administrarPersonas/buscarPersonas.jsp" />
+    </definition>
+    
+    <definition name="formIngresos" extends="baseLayout">
+        <put-attribute name="title" value="Ingreso de Fondos" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/ingresosDeFondos/formIngresosFondos.jsp" />
+    </definition>
+    
+    <definition name="formListarIngresosFondo" extends="baseLayout">
+        <put-attribute name="title" value="Listar Ingresos de Fondos" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/ingresosDeFondos/listarIngresos.jsp" />
+    </definition>
+    
+    <definition name="registroIngresos" extends="baseLayout">
+        <put-attribute name="title" value="Listar Ingresos de Fondos" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/ingresosDeFondos/RegistrarFondos.jsp" />
+    </definition>
+    
+    <definition name="formComMenores" extends="baseLayout">
+        <put-attribute name="title" value="Reporte Compras Menores" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/reporteComprasMenores/formComprasMenores.jsp" />
+    </definition>
+    
+    <definition name="listarGastosMenores" extends="baseLayout">
+        <put-attribute name="title" value="Reporte Compras Menores" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/reporteComprasMenores/listarGastosEjecutados.jsp" />
+    </definition>
+    
+    <definition name="reporteComprasMenores" extends="baseLayout">
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="title" value="Reporte Compras Menores" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/reporteComprasMenores/formReporteComprasM.jsp" />
+    </definition>
+    
+    <definition name="gastosPorCuenta" extends="baseLayout">
+        <put-attribute name="title" value="Gastos Por Cuenta" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/reporteGastosPorCuenta/formGastoPorCuenta.jsp" />
+    </definition>
+    
+    <definition name="reportePorCuenta" extends="baseLayout">
+        <put-attribute name="title" value="Gastos Por Cuenta" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/reporteGastosPorCuenta/listarIngresosE.jsp" />
+    </definition>
+    
+    <definition name="formNotaPedido" extends="baseLayout">
+        <put-attribute name="title" value="Nota de Pedido " />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/reporteNotaPorPedido/formNotaPorPedido.jsp" />
+    </definition>
+	
+    <definition name="listarNotaPedido" extends="baseLayout">
+        <put-attribute name="title" value="Nota de Pedido " />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/reporteNotaPorPedido/listarGastosEjecutadosNotaP.jsp" />
+    </definition>
+    
+    <definition name="arqueoCaja" extends="baseLayout">
+        <put-attribute name="title" value="Arqueo de Fondos " />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/reporteArqueoFondosCaja/listarCajaIngresosArqueo.jsp" />
+    </definition>
+    
+    <definition name="arqueoGlobalCuenta" extends="baseLayout">
+        <put-attribute name="title" value="Arqueo de Fondos " />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/reporteGlobalCuenta/listarCajaIngresosArqueoGlobal.jsp" />
+    </definition>
+    
+    <!-- Ing. freddy -->
+    
+    <definition name="inicioGastos" extends="baseLayout">
+        <put-attribute name="title" value="Inicio Gastos" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/administrarGastos/inicioGastos.jsp" />
+    </definition>
+       
+    <definition name="inicioSede" extends="baseLayout">
+        <put-attribute name="title" value="Inicio Sedes" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/administrarInstitudiones/administrarSedes/inicioSede.jsp" />
+    </definition>
+        
+    <definition name="inicioUnidad" extends="baseLayout">
+        <put-attribute name="title" value="Inicio Unidad" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/administrarInstitudiones/administrarUnidades/inicioUnidad.jsp" />
+    </definition>
+	
+
+    <definition name="inicioItem" extends="baseLayout">
+        <put-attribute name="title" value="Items" />
+        <put-attribute name="tagline" value="Registrar Personal Administrativo" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/administrarItem/inicioItem.jsp" />
+    </definition>
+	
+	
+	
+    <definition name="regMnuEnlaces" extends="baseLayout">
+        <put-attribute name="title" value="Enlaces" />
+        <put-attribute name="tagline" value="Administrar Enlaces" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/administrarMnuEnlaces/administrarMnuEnlaces.jsp" />
+    </definition>
+        
+    <definition name="regMenues" extends="baseLayout">
+        <put-attribute name="title" value="Menues" />
+        <put-attribute name="tagline" value="Administrar Menues" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/administrarMnuEnlaces/administrarMenues.jsp" />
+    </definition>
+    
+    <definition name="regMnuFunciones" extends="baseLayout">
+        <put-attribute name="title" value="Funciones" />
+        <put-attribute name="tagline" value="Administrar Funciones" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/administrarMnuEnlaces/administrarMnuFunciones.jsp" />
+    </definition>
+
+    <definition name="inicioGastosUnidad" extends="baseLayout">
+        <put-attribute name="title" value="Totales Gastos Por Unidades" />
+        <put-attribute name="tagline" value="Estadisticas Unidades" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/estadisticasCajita/totalesGastoUnidadesFuncionales/inicioTotalesGastosUnidades.jsp" />
+    </definition>
+    
+    <definition name="formNotaPedidoPersona" extends="baseLayout">
+        <put-attribute name="title" value="Nota Pedido Personas" />
+        <put-attribute name="tagline" value="Nota Pedido por Personas" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/reporteNotaPorPedido/notaPedidoPorPersonas/listaIngesosNotaPedidoPersonas.jsp" />
+    </definition>
+    
+    <definition name="listarGastosPersona" extends="baseLayout">
+        <put-attribute name="title" value="Nota Pedido Personas" />
+        <put-attribute name="tagline" value="Nota Pedido por Personas" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/reporteNotaPorPedido/notaPedidoPorPersonas/listarGastosPorPersonas.jsp" />
+    </definition>
+    
+    <definition name="formComMenoresPersona" extends="baseLayout">
+        <put-attribute name="title" value="Compras Menores Persona" />
+        <put-attribute name="tagline" value="Compras Menores Persona" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/reporteComprasMenores/comprasMenoresPersonas/ingresosComprasMenoresPersona.jsp" />
+    </definition>
+	
+    <definition name="gastosMenoresPersona" extends="baseLayout">
+        <put-attribute name="title" value="Compras Menores Persona" />
+        <put-attribute name="tagline" value="Compras Menores Persona" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/reporteComprasMenores/comprasMenoresPersonas/listarGastosComprasMenoresPers.jsp" />
+    </definition>	
+    
+    <definition name="arqueoCajaAurotidad" extends="baseLayout">
+        <put-attribute name="title" value="Arqueo Caja por Unidad" />
+        <put-attribute name="tagline" value="Arqueo de Cajas" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/reporteArqueoFondosCaja/arqueoFondosCajaAutoridad/arqueoFondoCajaAutoridad.jsp" />
+    </definition>
+    
+    <definition name="gastosCuentaAutoridad" extends="baseLayout">
+        <put-attribute name="title" value="Gastos por Cuenta y Unidad" />
+        <put-attribute name="tagline" value="Arqueo de Cajas" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/reporteGastosPorCuenta/gastosPorCuentaAutoridad/gastosPorCuentaUnidades.jsp" />
+    </definition>
+    
+    <definition name="inicioGastosDirection" extends="baseLayout">
+        <put-attribute name="title" value="Totales Gastos Por Direcciones" />
+        <put-attribute name="tagline" value="Estadisticas Direcciones" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/estadisticasCajita/totalesGastoDireccionesFuncionales/inicioTotalesGastosDirecciones.jsp" />
+    </definition>	
+		
+    <definition name="repArqueoGlobalAutoridad" extends="baseLayout">
+        <put-attribute name="title" value="Arqueo Global Cuentas" />
+        <put-attribute name="tagline" value="Arqueo Global" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/reporteGlobalCuenta/arqueoGlobalCuentaAutoridad/arqueoGlobalAutoridad.jsp" />
+    </definition>	
+    <definition name="inicioGastoClasificacion" extends="baseLayout">
+        <put-attribute name="title" value="Totales Gastos Por Partidas" />
+        <put-attribute name="tagline" value="Estadisticas Partidas" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/estadisticasCajita/totalesGastosTiposClasificacionesUnidad/inicioTotalesGastosClasificaciones.jsp" />
+    </definition>	
+    <definition name="inicioGastoClasificacionDireccion" extends="baseLayout">
+        <put-attribute name="title" value="Totales Gastos Por Partidas Direccion" />
+        <put-attribute name="tagline" value="Estadisticas Partidas Direccion" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/estadisticasCajita/totalesGastosTiposClasificacionesDireccion/inicioTotalesClasificacionesDireccion.jsp" />
+    </definition>
+    <definition name="inicioGastoGeneralesPartidas" extends="baseLayout">
+        <put-attribute name="title" value="Totales Gastos Generales Por Partidas" />
+        <put-attribute name="tagline" value="Estadisticas Gastos Partidas" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/estadisticasCajita/totalesGastosGeneralPorPartidas/inicioTotalesGastosGeneralPartidas.jsp" />
+    </definition>
+    <definition name="inicioCarpetas" extends="baseLayout">
+        <put-attribute name="title" value="Administrar Carpetas" />
+        <put-attribute name="tagline" value="Estadisticas Gastos Partidas" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/sac/administrrarCarpetas/administrarCarpetas.jsp" />
+    </definition>
+    <definition name="inicioEstantes" extends="baseLayout">
+        <put-attribute name="title" value="Administrar Estantes" />
+        <put-attribute name="tagline" value="Estantes" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/sac/administrarEstantes/administrarEstantes.jsp" />
+    </definition>			
+    <definition name="inicioComprobantes" extends="baseLayout">
+        <put-attribute name="title" value="Administrar Comprobantes" />
+        <put-attribute name="tagline" value="Comprobantes" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/sac/administrarComprobantes/administrarComprobantes.jsp" />
+    </definition>
+    <definition name="inicioPrestamos" extends="baseLayout">
+        <put-attribute name="title" value="Administrar Prestamos" />
+        <put-attribute name="tagline" value="Prestamos" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/sac/administrarPrestamos/administrarPrestamos.jsp" />
+    </definition>
+    
+    <definition name="inicioDevoluciones" extends="baseLayout">
+        <put-attribute name="title" value="Administrar Devolucion" />
+        <put-attribute name="tagline" value="Devoluciones" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/sac/administrarDevoluciones/administrarDevoluciones.jsp" />
+    </definition>
+    
+    <definition name="inicioMesGestion" extends="baseLayout">
+        <put-attribute name="title" value="Reporte Preventivos Mes y Gestion" />
+        <put-attribute name="tagline" value="MesGestion" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/sac/reportes/porMesGestion/porMesGestion.jsp" />
+    </definition>
+    <definition name="inicioPorTipoPago" extends="baseLayout">
+        <put-attribute name="title" value="Reporte Preventivos Por Tipo Pago" />
+        <put-attribute name="tagline" value="PorTipoPago" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/sac/reportes/porTipoPago/porTipoPago.jsp" />
+    </definition>	
+      <definition name="inicioComprobantesIngresos" extends="baseLayout">
+        <put-attribute name="title" value="Administrar Comprobantes Ingresos" />
+        <put-attribute name="tagline" value="Comprobantes Ingresos" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/sac/administrarComprobantesIngresos/administrarComprobantesIngresos.jsp" />
+    </definition>
+    <definition name="inicioBuscarComprobante" extends="baseLayout">
+        <put-attribute name="title" value="Buscar Preventivos" />
+        <put-attribute name="tagline" value="BuesquedaComprobantes" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/sac/busquedas/buscarComprobantes/buscarComprobante.jsp" />
+    </definition>
+    <definition name="inicioContratacion" extends="baseLayout">
+        <put-attribute name="title" value="Administrar Contrataciones" />
+        <put-attribute name="tagline" value="AdministrarContrataciones" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/sicoes/administrarContrataciones/administrarContratacion.jsp" />
+    </definition>
+    <definition name="inicioProyectos" extends="baseLayout">
+        <put-attribute name="title" value="Administrar Proyectos" />
+        <put-attribute name="tagline" value="AdministrarProyectos" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/sicoes/administrarProyectos/administrarProyectos.jsp" />
+    </definition>
+    <definition name="inicioReporteModalidad" extends="baseLayout">
+        <put-attribute name="title" value="Reporte Por Modalidad" />
+        <put-attribute name="tagline" value="ReportePorModalidades" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/sicoes/reportes/reportePorModalidades/reportePorModalidades.jsp" />
+    </definition>
+    <definition name="inicioContratados" extends="baseLayout">
+        <put-attribute name="title" value="Administrar Contratados - SICOES" />
+        <put-attribute name="tagline" value="AdministrarContratados" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/sicoes/administrarContratados/administrarContratados.jsp" />
+    </definition>	   
+     <definition name="formEscrutinioActas" extends="baseLayout">
+        <put-attribute name="title" value="Administrar Escrutinio Acta" />
+        <put-attribute name="tagline" value="AdministrarEscrutinio" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/escrutinio/administrarEscrutinioActas/administrarEscrutinioActas.jsp" />
+    </definition>    
+    
+     <definition name="formMesasSufragio" extends="baseLayout">
+        <put-attribute name="title" value="Administrar Mesas de Sufragio" />
+        <put-attribute name="tagline" value="AdministrarEscrutinio" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/escrutinio/administrarMesasSufragio/administrarMesasSufragio.jsp" />
+    </definition>
+     <definition name="formFrentesEleccion" extends="baseLayout">
+        <put-attribute name="title" value="Administrar Frentes Eleccion " />
+        <put-attribute name="tagline" value="AdministrarEscrutinio" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/escrutinio/administrarFrentesEleccion/administrarFrentesEleccion.jsp" />
+    </definition>    		
+     <definition name="formResultadoEleccion" extends="baseLayout">
+        <put-attribute name="title" value="Resultados de las Elecciones" />
+        <put-attribute name="tagline" value="AdministrarEscrutinio" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/escrutinio/resultadosElecciones/resultadosElecciones.jsp" />
+    </definition>
+    <definition name="imprimirResutladoEscrutinio" extends="baseLayout">
+        <put-attribute name="title" value="Resultados de las Elecciones" />
+        <put-attribute name="tagline" value="AdministrarEscrutinio" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/escrutinio/resultadosElecciones/imprimirResultadosElecciones2.jsp" />
+    </definition>   
+    <definition name="formResultadoMesas" extends="baseLayout">
+        <put-attribute name="title" value="Resultados de Sufragio Por Mesas" />
+        <put-attribute name="tagline" value="AdministrarEscrutinio" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/escrutinio/resultadosEleccionesMesas/resultadosEleccionesMesas.jsp" />
+    </definition>
+    <definition name="formCongresistas" extends="baseLayout">
+        <put-attribute name="title" value="Administrar Congresistas" />
+        <put-attribute name="tagline" value="AdministrarCongreso" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/congreso/administrarCongresistas/administrarCongresistas.jsp" />
+    </definition>
+       
+   <definition name="mostrarFile" extends="baseLayout">
+        <put-attribute name="title" value="Administrar Congresistas" />
+        <put-attribute name="tagline" value="AdministrarCongreso" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/fileman.jsp" />
+    </definition>
+    <definition name="fileManager" extends="baseLayout">
+        <put-attribute name="title" value="Administrar Congresistas" />
+        <put-attribute name="tagline" value="AdministrarCongreso" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/fileManager.jsp" />
+    </definition>
+    
+    <definition name="repArqueoFondoCajaImp" extends="baseOutside">
+        <put-attribute name="title" value="Administrar Congresistas" />
+        <put-attribute name="tagline" value="AdministrarCongreso" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/reporteArqueoFondosCaja/formReporteArqueoCaja.jsp" />
+    </definition>
+    
+    <!-- ===============================CAJA CHICA=========================================== -->
+    <definition name="formReporteArqueoCajaAutoridadImp" extends="baseOutside">
+        <put-attribute name="title" value="Caja Chica" />
+        <put-attribute name="tagline" value="AdministrarCongreso" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/reporteArqueoFondosCaja/arqueoFondosCajaAutoridad/formReporteArqueoCajaAutoridad.jsp" />
+    </definition>
+   <definition name="formReporteArqueoGlobalImp" extends="baseOutside">
+        <put-attribute name="title" value="Administrar Congresistas" />
+        <put-attribute name="tagline" value="AdministrarCongreso" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/reporteGlobalCuenta/formReporteArqueoGlobal.jsp" />
+    </definition>
+    <definition name="reporteArqueoGlobalCuentaAutoridadImp" extends="baseOutside">
+        <put-attribute name="title" value="Administrar Congresistas" />
+        <put-attribute name="tagline" value="AdministrarCongreso" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/reporteGlobalCuenta/arqueoGlobalCuentaAutoridad/reporteArqueoGlobalCuentaAutoridad.jsp" />
+    </definition>
+    <definition name="formReporteComprasMPersonasImp" extends="baseOutside">
+        <put-attribute name="title" value="Administrar Congresistas" />
+        <put-attribute name="tagline" value="AdministrarCongreso" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/reporteComprasMenores/comprasMenoresPersonas/formReporteComprasMPersonas.jsp" />
+    </definition>
+    <definition name="formReporteComprasMImp" extends="baseOutside">
+        <put-attribute name="title" value="Administrar Congresistas" />
+        <put-attribute name="tagline" value="AdministrarCongreso" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/reporteComprasMenores/formReporteComprasM.jsp" />
+    </definition>
+    <definition name="reportePorCuentaGastosAutoridadImp" extends="baseOutside">
+        <put-attribute name="title" value="Administrar Congresistas" />
+        <put-attribute name="tagline" value="AdministrarCongreso" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/reporteGastosPorCuenta/gastosPorCuentaAutoridad/reportePorCuentaGastosAutoridad.jsp" />
+    </definition>
+    <definition name="formReportePorCuentaGastosImp" extends="baseOutside">
+        <put-attribute name="title" value="Administrar Congresistas" />
+        <put-attribute name="tagline" value="AdministrarCongreso" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/reporteGastosPorCuenta/formReportePorCuentaGastos.jsp" />
+    </definition>
+    <definition name="imprimirNotaPedidoImp" extends="baseOutside">
+        <put-attribute name="title" value="Administrar Congresistas" />
+        <put-attribute name="tagline" value="AdministrarCongreso" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/reporteNotaPorPedido/formReporteNotaPedido.jsp" />
+    </definition>
+    <definition name="imprimirNotaPedidoPersonaImp" extends="baseOutside">
+        <put-attribute name="title" value="Administrar Congresistas" />
+        <put-attribute name="tagline" value="AdministrarCongreso" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/reporteNotaPorPedido/notaPedidoPorPersonas/formReporteNotaPedidoPersona.jsp" />
+    </definition>
+    
+    
+    <!-- =================================ARCHIVO CONTABLE========================================= -->
+    <definition name="imprimirReporteComprobanteImp" extends="baseOutside">
+        <put-attribute name="title" value="Archivo Contable" />
+        <put-attribute name="tagline" value="AdministrarCongreso" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/sac/reportes/porMesGestion/imprimirReporteComprobantes.jsp" />
+    </definition>
+    <definition name="imprimirComprobantesPorTipoPagoImp" extends="baseOutside">
+        <put-attribute name="title" value="Archivo Contable" />
+        <put-attribute name="tagline" value="AdministrarCongreso" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/sac/reportes/porTipoPago/imprimirReporteComprobantes.jsp" />
+    </definition>
+    <definition name="imprimirSacPrestamoComprobanteImp" extends="baseOutside">
+        <put-attribute name="title" value="Archivo Contable" />
+        <put-attribute name="tagline" value="AdministrarCongreso" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/sac/administrarPrestamos/imprimirPrestamoComprobante.jsp" />
+    </definition>
+    <definition name="imprimirSacDevolucionesComprobanteImp" extends="baseOutside">
+        <put-attribute name="title" value="Archivo Contable" />
+        <put-attribute name="tagline" value="AdministrarCongreso" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/sac/administrarDevoluciones/imprimirActaDevolucion.jsp" />
+    </definition>
+    <!-- =================================ARCHIVO CONTABLE========================================= -->
+    
+    
+    <!-- =================================AUTORIDAD========================================= -->
+    <definition name="imprimirGastosUnidadImp" extends="baseOutside">
+        <put-attribute name="title" value="Autoridad" />
+        <put-attribute name="tagline" value="AdministrarCongreso" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/estadisticasCajita/totalesGastoUnidadesFuncionales/imprimirTotalesUnidades.jsp" />
+    </definition>
+    <definition name="imprimirGastosDireccionImp" extends="baseOutside">
+        <put-attribute name="title" value="Autoridad" />
+        <put-attribute name="tagline" value="AdministrarCongreso" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/estadisticasCajita/totalesGastoDireccionesFuncionales/imprimirTotalesDirecciones.jsp" />
+    </definition>
+    <definition name="imprimirGastosPartidaUnidadImp" extends="baseOutside">
+        <put-attribute name="title" value="Autoridad" />
+        <put-attribute name="tagline" value="AdministrarCongreso" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/estadisticasCajita/totalesGastosTiposClasificacionesUnidad/imprimirTotalesGastosClasificaciones.jsp" />
+    </definition>
+    <definition name="imprimirGastosPartidaDireccionImp" extends="baseOutside">
+        <put-attribute name="title" value="Autoridad" />
+        <put-attribute name="tagline" value="AdministrarCongreso" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/estadisticasCajita/totalesGastosTiposClasificacionesDireccion/imprimirTotalesClasificacionesDireccion.jsp" />
+    </definition>
+    <definition name="imprimirGastosPartidaGeneralImp" extends="baseOutside">
+        <put-attribute name="title" value="Autoridad" />
+        <put-attribute name="tagline" value="AdministrarCongreso" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/estadisticasCajita/totalesGastosGeneralPorPartidas/imprimirTotalesGastosGeneralPartidas.jsp" />
+    </definition>
+    
+    <!-- ========================================POAI================================================ -->
+    
+      <definition name="inicioIdentificacion" extends="baseLayout">
+        <put-attribute name="title" value="Listar Personas" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/poais/administrarIdentificaciones/administrarIdentificacion.jsp" />
+    </definition>
+  
+    <definition name="inicioPoaisRequisitos" extends="baseLayout">
+        <put-attribute name="title" value="Listar Personas" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/poais/administrarRequisitos/administrarRequisitosCualidades.jsp" />
+    </definition>
+    <definition name="inicioPoaReqExperiencia" extends="baseLayout">
+        <put-attribute name="title" value="Listar Personas" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/poais/administrarRequisitos/administrarRequisitosExperiencias.jsp" />
+    </definition>
+    <definition name="inicioPoaReqFormaciones" extends="baseLayout">
+        <put-attribute name="title" value="Administrar Requisitos Formaciones" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/poais/administrarRequisitos/administrarRequisitosFormaciones.jsp" />
+    </definition>
+    <definition name="requiCumplimiento" extends="baseLayout">
+        <put-attribute name="title" value="Administrar Requisitos Cumplimientos" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/poais/administrarRequisitos/administrarRequisitosCumplimientos.jsp" />
+    </definition>
+    
+    <definition name="inicioObjetivo" extends="baseLayout">
+        <put-attribute name="title" value="Objetivo Resultado" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/poais/administrarObjetivos/administrarObjetivo.jsp" />
+    </definition>
+    
+    <definition name="inicioObjetivoActividad" extends="baseLayout">
+        <put-attribute name="title" value="Objetivo Actividad" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/poais/administrarObjetivos/administrarObjetivoActividad.jsp" />
+    </definition>
+    
+    <definition name="inicioObjetivoContinio" extends="baseLayout">
+        <put-attribute name="title" value="Objetivo Continio" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/poais/administrarObjetivos/administrarObjetivoContinuo.jsp" />
+    </definition>    
+  
+    <definition name="inicioPoaEstResultados" extends="baseLayout">
+        <put-attribute name="title" value="Estadisticas de Resultados" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/poais/estadisticas/resultadosPorActividades/resultadosPorActividades.jsp" />
+    </definition>  
+  
+    <definition name="poaiFormulario" extends="baseLayout">
+        <put-attribute name="title" value="Formulario POAI" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/poais/formulario/poaiFormulario.jsp" />
+    </definition>
+    
+    <definition name="poaiSupervision" extends="baseLayout">
+        <put-attribute name="title" value="Formulario POAI" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/poais/supervicion/supervision.jsp" />
+    </definition>
+    
+    <definition name="generarPoai" extends="baseNull">
+        <put-attribute name="title" value="Formulario POAI" />
+        <put-attribute name="tagline" value="Formulario POAI" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/poais/formulario/generarPoai.jsp" />
+    </definition>
+    
+    <definition name="listarReporteUnidad" extends="baseLayout">
+        <put-attribute name="title" value="Formulario POAI" />
+        <put-attribute name="tagline" value="Formulario POAI" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/poais/reporte/reporteUnidad.jsp" />
+    </definition>
+    
+    <definition name="listarReporteAdministrativo" extends="baseLayout">
+        <put-attribute name="title" value="Formulario POAI" />
+        <put-attribute name="tagline" value="Formulario POAI" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/poais/reporte/reporteAdministrativo.jsp" />
+    </definition>
+    
+    
+    <definition name="resoluciones" extends="baseLayout">
+        <put-attribute name="title" value="Administrar Resoluciones" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/gdoc/administrarResoluciones/administrarResoluciones.jsp" />
+    </definition>
+  
+    <definition name="convenios" extends="baseLayout">
+        <put-attribute name="title" value="Administrar Convenios" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/gdoc/administrarConvenios/administrarConvenios.jsp" />
+    </definition>
+    
+    <definition name="reportConvenios" extends="baseLayout">
+        <put-attribute name="title" value="Reporte de Convenios" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/gdoc/reportesConvenios/reportesConvenios.jsp" />
+    </definition>
+    <definition name="resolucionesDigitales" extends="baseLayout">
+        <put-attribute name="title" value="Administrar Resoluciones Digitales" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/gdoc/administrarResolucionesDigitales/administrarResolucionesDigitales.jsp" />
+    </definition>
+    
+       <definition name="imprimirResolucion" extends="baseOutside">
+        <put-attribute name="title" value="Imprimir Reporte Convenios" />
+        <put-attribute name="tagline" value="AdministrarCongreso" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/gdoc/imprimirResolucion/imprimirResolucion.jsp" />
+    </definition>
+    
+    <definition name="imprimirReportesConvenios2" extends="baseOutside">
+        <put-attribute name="title" value="Imprimir Resolucion" />
+        <put-attribute name="tagline" value="AdministrarCongreso" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/gdoc/reportesConvenios/imprimirReporteConvenios.jsp" />
+    </definition>
+    
+     <definition name="titulos" extends="baseLayout">
+        <put-attribute name="title" value="Administrar Titulos" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/gdoc/administrarTitulos/administrarTitulos.jsp" />
+    </definition>
+    
+    <definition name="titulados" extends="baseLayout">
+        <put-attribute name="title" value="Administrar Titulados" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/gdoc/administrarTitulados/administrarTitulados.jsp" />
+    </definition>
+    
+    <definition name="consejos" extends="baseLayout">
+        <put-attribute name="title" value="Administrar Consejos" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/gdoc/administrarConsejos/administrarConsejos.jsp" />
+    </definition>
+    
+    <definition name="gestionconsejos" extends="baseLayout">
+        <put-attribute name="title" value="Administrar Gestion Consejos" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/gdoc/administrarGestionConsejos/administrarGestionConsejos.jsp" />
+    </definition>
+    
+    <definition name="funcionesuser" extends="baseLayout">
+        <put-attribute name="title" value="Administrar Funciones Usuarios" />
+        <put-attribute name="tagline" value="Enter your Credentials" />
+        <put-attribute name="body" value="/WEB-INF/views/uap/usic/siga/gdoc/administrarFuncionesUsuarios/administrarFuncionesUsuarios.jsp" />
+    </definition>  
+    
+    
+</tiles-definitions>
